@@ -15,8 +15,6 @@ import { PizzaMenu } from './DB/PizzaMenu';
 import { MakarnaMenu } from './DB/MakarnaMenu';
 
 interface AppProps {
-    firebase: any;
-    database: any;
 }
 
 function App(props: AppProps) {
