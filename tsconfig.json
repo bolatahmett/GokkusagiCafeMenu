@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "target": "es5",
+        "module": "es6",
+        "noImplicitAny": true,
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "declaration": true,
+        "noUnusedLocals": true,
+        "skipLibCheck": true,
+    },
+    "include": [
+        "app/src"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
