@@ -13,6 +13,13 @@ import { MangalMenu } from './DB/MangalMenu';
 import { TostMenu } from './DB/TostMenu';
 import { PizzaMenu } from './DB/PizzaMenu';
 import { MakarnaMenu } from './DB/MakarnaMenu';
+import { SandvicMenu } from './DB/SandvicMenu';
+import { SalataMenu } from './DB/SalataMenu';
+import { AperatifMenu } from './DB/AperatifMenu';
+import { TatliMenu } from './DB/TatliMenu';
+import { SogukIcecekMenu } from './DB/SogukIcecekMenu';
+import { SicakIcecekMenu } from './DB/SicakIcecekMenu';
+import { VitaminBarMenu } from './DB/VitaminBar';
 
 interface AppProps {
 }
@@ -49,13 +56,13 @@ function App(props: AppProps) {
                         <Route exact path="/TostCesitleri" component={() => MainPage(TostMenu)} />
                         <Route exact path="/PizzaCesitleri" component={() => MainPage(PizzaMenu)} />
                         <Route exact path="/Makarna" component={() => MainPage(MakarnaMenu)} />
-                        <Route exact path="/Sandvic" component={() => MainPage(mainMenu)} />
-                        <Route exact path="/Salatalar" component={() => MainPage(mainMenu)} />
-                        <Route exact path="/Aperatifler" component={() => MainPage(mainMenu)} />
-                        <Route exact path="/Tatlilar" component={() => MainPage(mainMenu)} />
-                        <Route exact path="/SogukIcecek" component={() => MainPage(mainMenu)} />
-                        <Route exact path="/SicakIcecek" component={() => MainPage(mainMenu)} />
-                        <Route exact path="/VitaminBar" component={() => MainPage(mainMenu)} />
+                        <Route exact path="/Sandvic" component={() => MainPage(SandvicMenu)} />
+                        <Route exact path="/Salatalar" component={() => MainPage(SalataMenu)} />
+                        <Route exact path="/Aperatifler" component={() => MainPage(AperatifMenu)} />
+                        <Route exact path="/Tatlilar" component={() => MainPage(TatliMenu)} />
+                        <Route exact path="/SogukIcecek" component={() => MainPage(SogukIcecekMenu)} />
+                        <Route exact path="/SicakIcecek" component={() => MainPage(SicakIcecekMenu)} />
+                        <Route exact path="/VitaminBar" component={() => MainPage(VitaminBarMenu)} />
                     </Router>
                 </UserContext.Provider>
 
