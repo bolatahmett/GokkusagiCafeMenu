@@ -1,19 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Card, Col, Row, Space } from 'antd';
 import { MenuModel } from '../Model/MenuModel';
-import { useHistory } from 'react-router-dom';
+import { mainMenu } from '../DB/MainMenu';
 const { Meta } = Card;
 
 function MainPage(props: any) {
 
-    let history = useHistory();
+    const [menu, setMenu] = useState(mainMenu);
 
-    const cards = props.map((value: MenuModel) => {
+    const cards = menu.map((value: MenuModel) => {
         return <Card
             hoverable
             style={{ width: "240px" }}
             cover={<img alt="example" src={value.ImageSrc}
-                onClick={() => { history.push(value.RedirectUrl); window.scrollTo(0, 0); }}
+                onClick={() => { value.Menu && setMenu(value.Menu); window.scrollTo(0, 0); }}
             />}
         >
             <Meta title={value.Title} description={value.Description} />
@@ -24,7 +24,7 @@ function MainPage(props: any) {
         <>
             <Row justify="center" align="middle" style={{ padding: "30px" }}>
                 <Col>
-                    <Button onClick={() => { history.push('/'); window.scrollTo(0, 0); }}>Ana Menu</Button>
+                    <Button onClick={() => { setMenu(mainMenu); window.scrollTo(0, 0); }}>Ana Menu</Button>
                 </Col>
             </Row>
             <Row justify="center" align="middle" style={{ padding: "30px" }}>
@@ -36,7 +36,7 @@ function MainPage(props: any) {
             </Row>
             <Row justify="center" align="middle" style={{ padding: "30px" }}>
                 <Col>
-                    <Button onClick={() => { history.push('/'); window.scrollTo(0, 0); }}>Ana Menu</Button>
+                    <Button onClick={() => { setMenu(mainMenu); window.scrollTo(0, 0); }}>Ana Menu</Button>
                 </Col>
             </Row>
         </>

@@ -3,4 +3,5 @@ export declare class MenuModel {
     Description: string;
     ImageSrc: string;
     RedirectUrl: string;
+    Menu?: MenuModel[];
 }
