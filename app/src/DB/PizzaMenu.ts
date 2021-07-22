@@ -1,10 +1,10 @@
 import { MenuModel } from "../Model/MenuModel";
 
 export const PizzaMenu: MenuModel[] = [
-    { Title: "Peynirli Pizza", Description: "Peynirli Pizza", ImageSrc: './../../../images/noimage.jpeg', RedirectUrl: "PizzaCesitleri" },
-    { Title: "Karışık Pizza", Description: "Karışık Pizza", ImageSrc: './../../../images/noimage.jpeg', RedirectUrl: "PizzaCesitleri" },
-    { Title: "Sucuklu Pizza", Description: "Sucuklu Pizza", ImageSrc: './../../../images/noimage.jpeg', RedirectUrl: "PizzaCesitleri" },
-    { Title: "Sosisli Pizza", Description: "Sosisli Pizza", ImageSrc: './../../../images/noimage.jpeg', RedirectUrl: "PizzaCesitleri" },
-    { Title: "Vejeteryan Pizza", Description: "Vejeteryan Pizza", ImageSrc: './../../../images/noimage.jpeg', RedirectUrl: "PizzaCesitleri" },
-    { Title: "Kıymalı Pizza", Description: "Kıymalı Pizza", ImageSrc: './../../../images/noimage.jpeg', RedirectUrl: "PizzaCesitleri" },
+    { Title: "Peynirli Pizza", Description: "", ImageSrc: './../../../images/noimage.jpeg', RedirectUrl: "PizzaCesitleri" },
+    { Title: "Karışık Pizza", Description: "", ImageSrc: './../../../images/noimage.jpeg', RedirectUrl: "PizzaCesitleri" },
+    { Title: "Sucuklu Pizza", Description: "", ImageSrc: './../../../images/noimage.jpeg', RedirectUrl: "PizzaCesitleri" },
+    { Title: "Sosisli Pizza", Description: "", ImageSrc: './../../../images/noimage.jpeg', RedirectUrl: "PizzaCesitleri" },
+    { Title: "Vejeteryan Pizza", Description: "", ImageSrc: './../../../images/noimage.jpeg', RedirectUrl: "PizzaCesitleri" },
+    { Title: "Kıymalı Pizza", Description: "", ImageSrc: './../../../images/noimage.jpeg', RedirectUrl: "PizzaCesitleri" },
 ];

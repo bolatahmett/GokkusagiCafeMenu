@@ -5,4 +5,6 @@ export class MenuModel {
     ImageSrc: string;
     RedirectUrl: string;
     Menu?: MenuModel[];
+    IsBase?: number;
+    Price?: string;
 }
