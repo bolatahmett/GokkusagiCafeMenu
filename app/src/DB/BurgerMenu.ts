@@ -1,8 +1,8 @@
 import { MenuModel } from "../Model/MenuModel";
 
 export const BurgerMenu: MenuModel[] = [
-    { Title: "Hamburger", Description: "", ImageSrc: "./../../../images/noimage.jpeg", RedirectUrl: "Burgerler" },
-    { Title: "Double Burger", Description: "", ImageSrc: "./../../../images/noimage.jpeg", RedirectUrl: "Burgerler" },
-    { Title: "Chichken Burger", Description: "", ImageSrc: "./../../../images/noimage.jpeg", RedirectUrl: "Burgerler" },
-    { Title: "Cheese Burger", Description: "", ImageSrc: "./../../../images/noimage.jpeg", RedirectUrl: "Burgerler" }
+    { Title: "Hamburger Menü", Description: "", ImageSrc: "./../../../images/noimage.jpeg", RedirectUrl: "Burgerler", Price: "20.00" },
+    { Title: "Double Burger", Description: "", ImageSrc: "./../../../images/noimage.jpeg", RedirectUrl: "Burgerler", Price: "-" },
+    { Title: "Chichken Burger Menü", Description: "", ImageSrc: "./../../../images/noimage.jpeg", RedirectUrl: "Burgerler", Price: "20.00" },
+    { Title: "Cheese Burger", Description: "", ImageSrc: "./../../../images/noimage.jpeg", RedirectUrl: "Burgerler", Price: "-" }
 ];

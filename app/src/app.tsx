@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
 import UserContext from '../src/components/UserContext';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import MainPage from './pages/MainPage';
-import {
-    BrowserRouter as Router,
-    Route,
-} from "react-router-dom";
-import { mainMenu } from './DB/MainMenu';
-interface AppProps {
-}
 
-function App(props: AppProps) {
+
+function App() {
 
     const [user, setUser] = useState({});
     const value = { user, setUser };
@@ -28,20 +21,11 @@ function App(props: AppProps) {
                 )}
             >
                 <UserContext.Provider value={value}>
-                    <Router>
-                        <Route exact path="/" component={() => MainPage(mainMenu)} />
-                    </Router>
+                    <MainPage></MainPage>
                 </UserContext.Provider>
-
             </ErrorBoundary>
         </>
     )
 }
 
-const mapStateToProps = (state: any) => {
-    const user = state.user;
-    return { user };
-};
-
-
-export default connect(mapStateToProps, null)(App);
+export default App;

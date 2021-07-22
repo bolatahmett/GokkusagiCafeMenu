@@ -8,9 +8,6 @@ const { Panel } = Collapse;
 
 function MainPage(props: any) {
 
-    // const [menu, setMenu] = useState(mainMenu);
-
-
     const cards = mainMenu.map((value: MenuModel) => {
         return <Panel showArrow={false} header={<Card
             hoverable
@@ -44,33 +41,13 @@ function MainPage(props: any) {
 
     </Space>;
 
-    // const list =
-    //     <List
-    //         itemLayout="horizontal"
-    //         dataSource={menu}
-    //         renderItem={item => (
-    //             <List.Item>
-    //                 <List.Item.Meta
-    //                     avatar={<RightOutlined />}
-    //                     title={item.Title}
-    //                     description={item.Description}
-    //                 />
-    //                 <div>{item.Price}</div>
-    //             </List.Item>
-    //         )}
-    //     />;
-
     return (
         <>
             <BackTop />
-            {/* <Row justify="center" align="middle" style={{ padding: "30px" }}>
-                <Col>
-                    <Button onClick={() => { setMenu(mainMenu); window.scrollTo(0, 0); }}>Ana Menu</Button>
-                </Col>
-            </Row> */}
             <Row justify="center" align="middle" style={{ padding: "30px" }}>
-                {/* {menu[0].IsBase ? <Col>{cardsWithSpace}</Col> : <Col xs={22} sm={20} md={12} lg={12} xl={12}>{list}</Col>} */}
-                {<Col>{cardsWithSpace}</Col>}
+                {<Col>
+                    {cardsWithSpace}
+                </Col>}
             </Row>
         </>
     )
