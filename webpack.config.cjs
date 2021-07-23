@@ -55,6 +55,11 @@ module.exports = env => {
             new HtmlWebpackPlugin({
                 template: 'app/index.html',
             }),
+            new webpack.DefinePlugin({
+                'process.env': {
+                    FIREBASE_CONFIG: JSON.stringify(process.env.FIREBASE_CONFIG),
+                },
+            }),
             new CopyWebpackPlugin({
                 patterns: [
                     { from: "images", to: "images" },
