@@ -33,7 +33,7 @@ function App() {
                             </Button>
                         </Col>
                         <Col>
-                            <Menu mode={"vertical-right"}
+                            <Menu mode={"vertical"}
                                 hidden={toggleCollapsed}
                                 inlineCollapsed={toggleCollapsed} style={{
                                     position: "absolute",
