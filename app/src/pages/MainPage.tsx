@@ -44,7 +44,7 @@ function MainPage(props: any) {
     return (
         <>
             <BackTop />
-            <Row justify="center" align="middle" style={{ padding: "30px" }}>
+            <Row justify="center" align="middle" style={{ padding: "30px", paddingTop: "0px" }}>
                 {<Col>
                     {cardsWithSpace}
                 </Col>}
