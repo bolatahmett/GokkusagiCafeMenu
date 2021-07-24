@@ -50,7 +50,9 @@ function App() {
                                 </Menu.Item>
                                 <Menu.Item key="Login" icon={<LoginOutlined />} onClick={() => {
                                     setToggleCollapsed(false);
-                                    console.log(process.env.FIREBASE_CONFIG);
+
+                                    // @ts-ignore
+                                    console.log(process.env.FIREBASE_CONFIG.apiKey);
                                 }}>
                                     Giriş Yap
                                 </Menu.Item>
