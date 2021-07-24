@@ -38,7 +38,7 @@ function App() {
                                 </Menu.Item>
                                 <Menu.Item key="Login" icon={<LoginOutlined />} onClick={() => {
                                     // @ts-ignore
-                                    console.log(process.env.FIREBASE_CONFIG.apiKey);
+                                    console.log(JSON.parse(process.env.FIREBASE_CONFIG).apiKey);
                                 }}>
                                     Giriş Yap
                                 </Menu.Item>
