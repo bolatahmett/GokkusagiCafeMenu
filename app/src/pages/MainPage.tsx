@@ -1,20 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BackTop, Card, Col, Collapse, List, Row, Space } from 'antd';
 import { MenuModel } from '../Model/MenuModel';
 import { RightOutlined } from '@ant-design/icons';
-import { mainMenu } from '../DB/MainMenu';
+import { getMenu, registerAll } from '../DB/Menu';
 const { Meta } = Card;
 const { Panel } = Collapse;
 
 function MainPage(props: any) {
+    const [mainMenu, setMainMenu] = useState([]);
+
+    useEffect(() => {
+        if (mainMenu.length == 0) {
+            debugger;
+            getMenu("MainMenu", setMainMenu);
+        }
+    }, []);
 
     const cards = mainMenu.map((value: MenuModel) => {
         return <Panel showArrow={false} header={<Card
             hoverable
             style={{ width: "240px" }}
             cover={<img alt="example" src={value.ImageSrc}
-            />}
-        >
+            />}>
             <Meta title={value.Title} description={value.Description} />
         </Card>} key={value.Title}>
             <List

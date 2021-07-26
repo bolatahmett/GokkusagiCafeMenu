@@ -1,3 +1,7 @@
 /// <reference types="react" />
-declare function App(): JSX.Element;
+interface AppProps {
+    firebase: any;
+    database: any;
+}
+declare function App(props: AppProps): JSX.Element;
 export default App;

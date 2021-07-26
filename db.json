@@ -1,0 +1,640 @@
+[{
+   "Title":"Sıcak içecekler",
+   "Description":"Sıcak içecekler",
+   "ImageSrc":"./../../../images/sicakicecek.jpg",
+   "RedirectUrl":"SicakIcecek",
+   "Menu":"SicakIcecekMenu",
+   "IsBase":1
+},
+{
+   "Title":"Soğuk içecekler",
+   "Description":"Soğuk içecekler",
+   "ImageSrc":"./../../../images/sogukicecek.jpg",
+   "RedirectUrl":"SogukIcecek",
+   "Menu":"SogukIcecekMenu",
+   "IsBase":1
+},
+{
+   "Title":"Vitamin Bar",
+   "Description":"Vitamin Bar",
+   "ImageSrc":"./../../../images/vitaminbar.jpg",
+   "RedirectUrl":"VitaminBar",
+   "Menu":"VitaminBarMenu",
+   "IsBase":1
+},
+{
+   "Title":"Tost Çeşitleri",
+   "Description":"Tost Çeşitleri",
+   "ImageSrc":"./../../../images/tost.jpg",
+   "RedirectUrl":"TostCesitleri",
+   "Menu":"TostMenu",
+   "IsBase":1
+},
+{
+   "Title":"Burgerler",
+   "Description":"Burgerler",
+   "ImageSrc":"./../../../images/burgers.png",
+   "RedirectUrl":"Burgerler",
+   "Menu":"BurgerMenu",
+   "IsBase":1
+},
+{
+   "Title":"Mangaldan",
+   "Description":"Mangaldan",
+   "ImageSrc":"./../../../images/mangal.jpg",
+   "RedirectUrl":"Mangaldan",
+   "Menu":"MangalMenu",
+   "IsBase":1
+},
+{
+   "Title":"Pizza Çeşitleri",
+   "Description":"Pizza Çeşitleri",
+   "ImageSrc":"./../../../images/pizza.jpg",
+   "RedirectUrl":"PizzaCesitleri",
+   "Menu":"PizzaMenu",
+   "IsBase":1
+},
+{
+   "Title":"Makarna",
+   "Description":"Makarna",
+   "ImageSrc":"./../../../images/makarna.jpg",
+   "RedirectUrl":"Makarna",
+   "Menu":"MakarnaMenu",
+   "IsBase":1
+},
+{
+   "Title":"Sandviçler",
+   "Description":"Sandviçler",
+   "ImageSrc":"./../../../images/sandvic.jpg",
+   "RedirectUrl":"Sandvic",
+   "Menu":"SandvicMenu",
+   "IsBase":1
+},
+{
+   "Title":"Salatalar",
+   "Description":"Salatalar",
+   "ImageSrc":"./../../../images/salata.jpg",
+   "RedirectUrl":"Salatalar",
+   "Menu":"SalataMenu",
+   "IsBase":1
+},
+{
+   "Title":"Aparetifler",
+   "Description":"Aparetifler",
+   "ImageSrc":"./../../../images/aperatif.jpg",
+   "RedirectUrl":"Aperatifler",
+   "Menu":"AperatifMenu",
+   "IsBase":1
+},
+{
+   "Title":"Tatlılar",
+   "Description":"Tatlılar",
+   "ImageSrc":"./../../../images/tatlılar.jpg",
+   "RedirectUrl":"Tatlilar",
+   "Menu":"TatliMenu",
+   "IsBase":1
+},
+{
+   "Title":"Atıştırmalık Tabağı",
+   "Description":"Orta veya büyük",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Aperatifler"
+},
+{
+   "Title":"Patates Cipsi",
+   "Description":"Orta veya büyük",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Aperatifler"
+},
+{
+   "Title":"Elma Dilim Patates",
+   "Description":"Orta veya büyük",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Aperatifler"
+},
+{
+   "Title":"Nugget",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Aperatifler"
+},
+{
+   "Title":"Soğan Halkası",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Aperatifler"
+},
+{
+   "Title":"Patates Kruket",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Aperatifler"
+},
+{
+   "Title":"Sigara Böreği",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Aperatifler"
+},
+{
+   "Title":"Sosis Tabağı",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Aperatifler"
+},
+{
+   "Title":"Köfte Ekmek",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Aperatifler"
+},
+{
+   "Title":"Çıtır Tavuk Parçaları",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Aperatifler"
+},
+{
+   "Title":"Schinitgel",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Aperatifler"
+},
+{
+   "Title":"Hamburger Menü",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Burgerler",
+   "Price":"20.00"
+},
+{
+   "Title":"Double Burger",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Burgerler",
+   "Price":"-"
+},
+{
+   "Title":"Chichken Burger Menü",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Burgerler",
+   "Price":"20.00"
+},
+{
+   "Title":"Cheese Burger",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Burgerler",
+   "Price":"-"
+},
+{
+   "Title":"Fettuccine Alfredo",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Makarna"
+},
+{
+   "Title":"Panne Arabiatta",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Makarna"
+},
+{
+   "Title":"Spaghetti Bolognese",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Makarna"
+},
+{
+   "Title":"Adana Dürüm",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Mangaldan"
+},
+{
+   "Title":"Adana Servis",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Mangaldan"
+},
+{
+   "Title":"Kuşbaşı Dürüm",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Mangaldan"
+},
+{
+   "Title":"Kuşbaşı Servis",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Mangaldan"
+},
+{
+   "Title":"Tavuk Dürüm",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Mangaldan"
+},
+{
+   "Title":"Tavuk Servis",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Mangaldan"
+},
+{
+   "Title":"Tavuk Şiş Kebap",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Mangaldan"
+},
+{
+   "Title":"Tavuk Şiş Servis",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Mangaldan"
+},
+{
+   "Title":"Dürüm Köfte",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Mangaldan"
+},
+{
+   "Title":"Köfte Porsiyon",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Mangaldan"
+},
+{
+   "Title":"Izagara Köfte",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Mangaldan"
+},
+{
+   "Title":"Balık Ekmek",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Mangaldan"
+},
+{
+   "Title":"Peynirli Pizza",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"PizzaCesitleri"
+},
+{
+   "Title":"Karışık Pizza",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"PizzaCesitleri"
+},
+{
+   "Title":"Sucuklu Pizza",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"PizzaCesitleri"
+},
+{
+   "Title":"Sosisli Pizza",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"PizzaCesitleri"
+},
+{
+   "Title":"Vejeteryan Pizza",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"PizzaCesitleri"
+},
+{
+   "Title":"Kıymalı Pizza",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"PizzaCesitleri"
+},
+{
+   "Title":"Ton Balıklı Salata",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Salatalar"
+},
+{
+   "Title":"Akdeniz Salata",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Salatalar"
+},
+{
+   "Title":"Mevsim Salata",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Salatalar"
+},
+{
+   "Title":"Soğuk Sandviç",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Sandvic"
+},
+{
+   "Title":"Bol Peynirli Sandviç",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Sandvic"
+},
+{
+   "Title":"Ton Balıklı Sandviç",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Sandvic"
+},
+{
+   "Title":"Çay",
+   "Description":"",
+   "ImageSrc":"./../../../images/sicakicecek.jpeg",
+   "RedirectUrl":"SicakIcecek",
+   "Price":"2.50"
+},
+{
+   "Title":"Oralet",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SicakIcecek",
+   "Price":"1.50"
+},
+{
+   "Title":"Kahve",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SicakIcecek",
+   "Price":"5.00"
+},
+{
+   "Title":"Kaynayan Kahve",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SicakIcecek",
+   "Price":"5.00"
+},
+{
+   "Title":"Nescafe",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SicakIcecek",
+   "Price":"5.00"
+},
+{
+   "Title":"Sahlep",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SicakIcecek",
+   "Price":"-"
+},
+{
+   "Title":"Sıcak Çikolata",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SicakIcecek",
+   "Price":"-"
+},
+{
+   "Title":"Cola",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SogukIcecek",
+   "Price":"5.00"
+},
+{
+   "Title":"Fanta",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SogukIcecek",
+   "Price":"5.00"
+},
+{
+   "Title":"Sprite",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SogukIcecek",
+   "Price":"5.00"
+},
+{
+   "Title":"Ice Tea",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SogukIcecek",
+   "Price":"5.00"
+},
+{
+   "Title":"Kutu Meyve Suları",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SogukIcecek",
+   "Price":"5.00"
+},
+{
+   "Title":"Soda Çeşitleri",
+   "Description":"Meyveli",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SogukIcecek",
+   "Price":"4.00"
+},
+{
+   "Title":"Sade Soda",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SogukIcecek",
+   "Price":"4.00"
+},
+{
+   "Title":"Ankara Gazozu",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SogukIcecek",
+   "Price":"4.00"
+},
+{
+   "Title":"Şişe Pepsi",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SogukIcecek",
+   "Price":"4.00"
+},
+{
+   "Title":"Meysu",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SogukIcecek",
+   "Price":"5.00"
+},
+{
+   "Title":"Su",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"SogukIcecek",
+   "Price":"1.50"
+},
+{
+   "Title":"Çikolatalı Cheesecake",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Frambuazlı Cheesecake",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Haytalı",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Katmer",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Waffle",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Pankek",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Ekler",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Sütlaç",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Yaş Pasta Dilim",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Puding",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Künefe",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Traliçe",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Dondurma Çeşitleri",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"Tatlilar"
+},
+{
+   "Title":"Karışık Tost",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"TostCesitleri",
+   "Price":"12.00"
+},
+{
+   "Title":"Kaşarlı Tost",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"TostCesitleri",
+   "Price":"10.00"
+},
+{
+   "Title":"Sucuklu Tost",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"TostCesitleri",
+   "Price":"10.00"
+},
+{
+   "Title":"BDG Soslu Sosisli Tost",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"TostCesitleri",
+   "Price":"-"
+},
+{
+   "Title":"Yengen Menu",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"TostCesitleri",
+   "Price":"-"
+},
+{
+   "Title":"Portakal Suyu",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"VitaminBar",
+   "Price":"10.00"
+},
+{
+   "Title":"Nar Suyu",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"VitaminBar",
+   "Price":"10.00"
+},
+{
+   "Title":"Havuç Suyu",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"VitaminBar",
+   "Price":"10.00"
+},
+{
+   "Title":"Atom",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"VitaminBar",
+   "Price":"15.00"
+},
+{
+   "Title":"Akdeniz Kokteyl",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"VitaminBar",
+   "Price":"13.00"
+},
+{
+   "Title":"Damak Kokteyl",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"VitaminBar",
+   "Price":"13.00"
+},
+{
+   "Title":"MilkShake",
+   "Description":"",
+   "ImageSrc":"./../../../images/noimage.jpeg",
+   "RedirectUrl":"VitaminBar",
+   "Price":"12.00"
+}]

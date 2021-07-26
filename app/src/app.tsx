@@ -7,7 +7,12 @@ import {
     AppstoreOutlined, LoginOutlined, CommentOutlined
 } from '@ant-design/icons';
 
-function App() {
+interface AppProps {
+    firebase: any;
+    database: any;
+}
+
+function App(props: AppProps) {
 
     const [user, setUser] = useState({});
     const value = { user, setUser };
@@ -36,10 +41,7 @@ function App() {
                                 <Menu.Item key="CommentPersonal" icon={<CommentOutlined />}>
                                     Hizmeti Yorumla
                                 </Menu.Item>
-                                <Menu.Item key="Login" icon={<LoginOutlined />} onClick={() => {
-                                    // @ts-ignore
-                                    console.log(JSON.parse(process.env.FIREBASE_CONFIG).apiKey);
-                                }}>
+                                <Menu.Item key="Login" icon={<LoginOutlined />}>
                                     Giriş Yap
                                 </Menu.Item>
                             </Menu>
