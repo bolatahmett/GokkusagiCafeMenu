@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { BackTop, Card, Col, Collapse, List, Row, Space } from 'antd';
 import { MenuModel } from '../Model/MenuModel';
 import { RightOutlined } from '@ant-design/icons';
-import { getMenu, registerAll } from '../DB/Menu';
+import { getMenu } from '../DB/Menu';
 const { Meta } = Card;
 const { Panel } = Collapse;
 
