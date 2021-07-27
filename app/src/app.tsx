@@ -6,6 +6,8 @@ import { Col, Menu, Row } from 'antd';
 import {
     AppstoreOutlined, LoginOutlined, CommentOutlined
 } from '@ant-design/icons';
+import UserLogin from './components/UserLogin';
+import RegisterUser from './components/RegisterUser';
 
 interface AppProps {
     firebase: any;
@@ -15,7 +17,11 @@ interface AppProps {
 function App(props: AppProps) {
 
     const [user, setUser] = useState({});
-    const value = { user, setUser };
+
+    const [pageStatus, setPageStatus] = useState(0);
+
+    const value = { user, setUser, setPageStatus };
+
 
     return (
         <>
@@ -41,7 +47,7 @@ function App(props: AppProps) {
                                 <Menu.Item key="CommentPersonal" icon={<CommentOutlined />}>
                                     Hizmeti Yorumla
                                 </Menu.Item>
-                                <Menu.Item key="Login" icon={<LoginOutlined />}>
+                                <Menu.Item key="Login" icon={<LoginOutlined />} onClick={() => { setPageStatus(1); }}>
                                     Giriş Yap
                                 </Menu.Item>
                             </Menu>
@@ -49,7 +55,9 @@ function App(props: AppProps) {
                     </Row>
                     <Row justify={"center"}>
                         <Col>
-                            <MainPage></MainPage>
+                            {pageStatus == 0 && <MainPage></MainPage>}
+                            {pageStatus == 1 && <UserLogin></UserLogin>}
+                            {pageStatus == 2 && <RegisterUser></RegisterUser>}
                         </Col>
                     </Row>
                 </UserContext.Provider>
