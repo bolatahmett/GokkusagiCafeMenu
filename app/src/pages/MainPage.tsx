@@ -11,19 +11,22 @@ function MainPage(props: any) {
 
     useEffect(() => {
         if (mainMenu.length == 0) {
-            debugger;
             getMenu("MainMenu", setMainMenu);
         }
     }, []);
 
     const cards = mainMenu.map((value: MenuModel) => {
-        return <Panel showArrow={false} header={<Card
-            hoverable
-            style={{ width: "240px" }}
-            cover={<img alt="example" src={value.ImageSrc}
-            />}>
-            <Meta title={value.Title} description={value.Description} />
-        </Card>} key={value.Title}>
+        return <Panel showArrow={false}
+            header={
+                <Card
+                    hoverable
+                    style={{ width: "240px" }}
+                    cover={<img alt="example" src={value.ImageSrc}
+                    />}>
+                    <Meta title={value.Title} description={value.Description} />
+                </Card>
+            }
+            key={value.Title}>
             <List
                 itemLayout="horizontal"
                 dataSource={value.Menu}

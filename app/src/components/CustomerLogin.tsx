@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Form, Input, Select, Button, Col, Row } from 'antd';
 import UserContext from '../components/UserContext';
-import { registerUser } from '../DB/user';
+import { loginCustomerUser } from '../DB/user';
 
 const { Option } = Select;
 
@@ -40,9 +40,12 @@ const RegisterUser = () => {
             Email: values.Email === undefined ? "a" : values.Email,
             Password: values.Password
         };
-        registerUser(user);
-        context.setPageStatus(0);
+        loginCustomerUser(user, setPageStatus);
     };
+
+    const setPageStatus = () => {
+        context.setPageStatus(0);
+    }
 
     const prefixSelector = (
         <Form.Item name="prefix" noStyle>
@@ -101,31 +104,9 @@ const RegisterUser = () => {
                         ]}
                         hasFeedback
                     >
-                        <Input.Password />
+                        <Input.Password placeholder={"Şifreyi görevliden isteyiniz."} />
                     </Form.Item>
 
-                    <Form.Item
-                        name="Confirm"
-                        label="Şifreyi onayla"
-                        dependencies={['Password']}
-                        hasFeedback
-                        rules={[
-                            {
-                                required: true,
-                                message: 'Lütfen şifreyi onaylayınız!',
-                            },
-                            ({ getFieldValue }) => ({
-                                validator(_, value) {
-                                    if (!value || getFieldValue('Password') === value) {
-                                        return Promise.resolve();
-                                    }
-                                    return Promise.reject(new Error('İki şifre birbiri ile uyuşmuyor!'));
-                                },
-                            }),
-                        ]}
-                    >
-                        <Input.Password />
-                    </Form.Item>
                     <Form.Item {...tailFormItemLayout}>
                         <Row>
                             <Col span={6} offset={3}>

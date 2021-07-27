@@ -1,4 +1,4 @@
 interface ILoginModel {
-    IdentifyNumber: string;
+    PhoneNumber: string;
     Password: string;
 }

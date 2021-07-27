@@ -1,8 +1,10 @@
-import { Form, Input, Button, Checkbox, Col, Row } from 'antd';
+import { Form, Input, Button, Checkbox, Col, Row, Select } from 'antd';
 import React, { useContext } from 'react';
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { LockOutlined } from '@ant-design/icons';
 import UserContext from '../components/UserContext';
 import { loginUser } from '../DB/user';
+
+const { Option } = Select;
 
 const UserLogin = () => {
 
@@ -15,12 +17,20 @@ const UserLogin = () => {
 
     const onFinish = (values: any) => {
         let userInfo: ILoginModel = {
-            IdentifyNumber: values.IdentifyNumber,
+            PhoneNumber: values.PhoneNumber,
             Password: values.Password
         };
 
         loginUser(userInfo, onSuccess);
     };
+
+    const prefixSelector = (
+        <Form.Item name="prefix" noStyle>
+            <Select style={{ width: 70 }}>
+                <Option value="90">+90</Option>
+            </Select>
+        </Form.Item>
+    );
 
     return (
         <Row justify="center" align="middle" style={{ height: "inherit" }}>
@@ -28,14 +38,14 @@ const UserLogin = () => {
                 <Form
                     name="normal_login"
                     className="login-form"
-                    initialValues={{ remember: true }}
+                    initialValues={{ remember: true, prefix: '90' }}
                     onFinish={onFinish}
                 >
                     <Form.Item
-                        name="IdentifyNumber"
-                        rules={[{ required: true, message: 'Lütfen TC kimlik numarasını giriniz!' }]}
+                        name="PhoneNumber"
+                        rules={[{ required: true, message: 'Lütfen telefon numarası giriniz!' }]}
                     >
-                        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="TC Kimik No" />
+                        <Input addonBefore={prefixSelector} style={{ width: '100%' }} placeholder="Telefon numarası" />
                     </Form.Item>
                     <Form.Item
                         name="Password"
