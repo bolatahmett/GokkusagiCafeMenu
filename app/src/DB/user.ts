@@ -28,7 +28,7 @@ export const loginCustomerUser = (user: IUserModel, onSuccess: any) => {
         .once('value')
         .then(function (snapshot) {
             registerUser(user);
-            onSuccess();
+            onSuccess(user);
         });
 }
 

@@ -38,13 +38,15 @@ const RegisterUser = () => {
             Name: values.Name,
             Surname: values.Surname,
             Email: values.Email === undefined ? "a" : values.Email,
-            Password: values.Password
+            Password: values.Password,
+            Type: 0
         };
-        loginCustomerUser(user, setPageStatus);
+        loginCustomerUser(user, setPageStatusAndUser);
     };
 
-    const setPageStatus = () => {
+    const setPageStatusAndUser = (user: IUserModel) => {
         context.setPageStatus(0);
+        context.setUser(user);
     }
 
     const prefixSelector = (

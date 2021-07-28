@@ -11,6 +11,7 @@ const UserLogin = () => {
     const context = useContext(UserContext);
 
     const onSuccess = (user: IUserModel) => {
+        debugger;
         context.setUser(user);
         context.setPageStatus(0);
     }

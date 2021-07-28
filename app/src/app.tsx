@@ -18,7 +18,10 @@ interface AppProps {
 
 function App(props: AppProps) {
 
-    const [user, setUser] = useState({});
+    const tempUser = {
+        Type: -1
+    } as unknown as IUserModel;
+    const [user, setUser] = useState(tempUser);
 
     const [pageStatus, setPageStatus] = useState(0);
 
@@ -46,16 +49,16 @@ function App(props: AppProps) {
                                 <Menu.Item key="CustomerLogin" icon={<LoginOutlined />} onClick={() => { setPageStatus(3); }}>
                                     Müşteri Girişi
                                 </Menu.Item>
-                                <Menu.Item key="Order" icon={< AppstoreOutlined />} hidden={true} >
+                                <Menu.Item key="Order" icon={< AppstoreOutlined />} hidden={(user as IUserModel)?.Type !== 0} >
                                     Sipariş Ver
                                 </Menu.Item>
-                                <Menu.Item key="CallingTheWaiter" icon={<AppstoreOutlined />} hidden={true}>
+                                <Menu.Item key="CallingTheWaiter" icon={<AppstoreOutlined />} hidden={(user as IUserModel)?.Type !== 0}>
                                     Garson Çağır
                                 </Menu.Item>
-                                <Menu.Item key="CommentPersonal" icon={<CommentOutlined />} hidden={true}>
+                                <Menu.Item key="CommentPersonal" icon={<CommentOutlined />} hidden={(user as IUserModel)?.Type !== 0}>
                                     Hizmeti Yorumla
                                 </Menu.Item>
-                                <Menu.Item key="CustomerLoginPassword" icon={<LoginOutlined />} onClick={() => { setPageStatus(4); }} hidden={true}>
+                                <Menu.Item key="CustomerLoginPassword" icon={<LoginOutlined />} onClick={() => { setPageStatus(4); }} hidden={(user as IUserModel)?.Type !== 1}>
                                     Müşteri Şifresi Al
                                 </Menu.Item>
                             </Menu>
