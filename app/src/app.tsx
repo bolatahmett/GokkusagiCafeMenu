@@ -40,6 +40,12 @@ function App(props: AppProps) {
                     <Row>
                         <Col>
                             <Menu mode={"horizontal"}>
+                                <Menu.Item key="Login" icon={<LoginOutlined />} onClick={() => { setPageStatus(1); }}>
+                                    Giriş Yap
+                                </Menu.Item>
+                                <Menu.Item key="CustomerLogin" icon={<LoginOutlined />} onClick={() => { setPageStatus(3); }}>
+                                    Müşteri Girişi
+                                </Menu.Item>
                                 <Menu.Item key="Order" icon={< AppstoreOutlined />} hidden={true} >
                                     Sipariş Ver
                                 </Menu.Item>
@@ -48,12 +54,6 @@ function App(props: AppProps) {
                                 </Menu.Item>
                                 <Menu.Item key="CommentPersonal" icon={<CommentOutlined />} hidden={true}>
                                     Hizmeti Yorumla
-                                </Menu.Item>
-                                <Menu.Item key="Login" icon={<LoginOutlined />} onClick={() => { setPageStatus(1); }}>
-                                    Giriş Yap
-                                </Menu.Item>
-                                <Menu.Item key="CustomerLogin" icon={<LoginOutlined />} onClick={() => { setPageStatus(3); }}>
-                                    Müşteri Girişi
                                 </Menu.Item>
                                 <Menu.Item key="CustomerLoginPassword" icon={<LoginOutlined />} onClick={() => { setPageStatus(4); }} hidden={true}>
                                     Müşteri Şifresi Al
