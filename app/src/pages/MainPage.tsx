@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { BackTop, Card, Col, Collapse, List, Popconfirm, Row, Space } from 'antd';
+import { BackTop, Button, Card, Col, Collapse, List, Popconfirm, Row, Space } from 'antd';
 import { MenuModel } from '../Model/MenuModel';
 import { RightOutlined } from '@ant-design/icons';
 import { getMenu, updateMenu } from '../DB/Menu';
 import UserContext from '../components/UserContext';
+import MenuEdit from '../components/MenuEdit';
 const { Meta } = Card;
 const { Panel } = Collapse;
 
@@ -31,31 +32,42 @@ function MainPage(props: any) {
         getMenu("MainMenu", setMainMenu);
     }
 
-    const editMenuItem = (item: any) => {
-
-    }
-
     const cards = mainMenu.map((value: MenuModel) => {
         return <Panel showArrow={false}
             header={
                 <Card
                     hoverable
-                    style={{ width: "240px" }}
+                    style={{ maxWidth: "400px" }}
                     cover={<img alt="example" src={value.ImageSrc}
                     />}>
                     <Meta title={value.Title} description={value.Description} />
                 </Card>
             }
             key={value.Title}>
+            <Popconfirm
+                title={<MenuEdit code={value.Code} item={undefined} menu={mainMenu}></MenuEdit>}
+                placement="top"
+                onConfirm={() => getMenu("MainMenu", setMainMenu)} okText="Tamamlandı" cancelText="Vazgeç"
+            >
+                {(context.user as IUserModel)?.Type === 1 && <Button type="primary" shape="round" ghost style={{ width: "100%" }}> Menü Ekle </Button>}
+            </Popconfirm>
+
             <List
                 itemLayout="horizontal"
                 dataSource={value.Menu}
                 renderItem={item => (
                     <List.Item
-                        actions={(context.user as IUserModel)?.Type === 1 && [<a key="list-edit" onClick={() => editMenuItem(item)}>Düzenle</a>,
-                        <Popconfirm placement="top" title={"Menu silinecek emin misiniz?"} onConfirm={() => deleteMenuItem(value, item)} okText="Yes" cancelText="No">
-                            <a key="list-delete">Sil</a>
-                        </Popconfirm>
+                        actions={(context.user as IUserModel)?.Type === 1 && [
+                            <Popconfirm
+                                title={<MenuEdit code={value.Code} item={item} menu={mainMenu}></MenuEdit>}
+                                placement="top"
+                                onConfirm={() => getMenu("MainMenu", setMainMenu)} okText="Tamamlandı" cancelText="Vazgeç"
+                            >
+                                <a key="list-edit">Düzenle</a>
+                            </Popconfirm>,
+                            <Popconfirm placement="top" title={"Menu silinecek emin misiniz?"} onConfirm={() => deleteMenuItem(value, item)} okText="Yes" cancelText="No">
+                                <a key="list-delete">Sil</a>
+                            </Popconfirm>
                         ]}
                     >
                         <List.Item.Meta
