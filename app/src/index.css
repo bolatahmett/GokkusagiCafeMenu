@@ -36,7 +36,11 @@
       background: white;
   }
 
-
-
-
- 
+ .menu-button {
+   font-size: xx-small !important;
+   font: menu;
+   position: fixed !important;
+   right: 0px !important;
+   z-index: 9999 !important;
+   width: 75px !important;
+ }
