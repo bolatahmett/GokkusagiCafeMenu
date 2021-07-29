@@ -72,7 +72,6 @@ const UserLogin = () => {
                         <Button type="primary" htmlType="submit" className="login-form-button">
                             Log in
                         </Button>
-                        Or <a onClick={() => context.setPageStatus(2)} >register now!</a>
                     </Form.Item>
                 </Form>
             </Col>

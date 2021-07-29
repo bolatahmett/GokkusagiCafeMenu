@@ -17,8 +17,13 @@ export const registerMenu = (menu: MenuModel, code: string) => {
     database.ref(menu.Code + "/" + menuKey).set(dbMenu);
 }
 
-export const getMenu = (code: string, onSuccess: any) => {
+export const updateMenu = (element: MenuModel, code: string) => {
+    var dbMenu = { ...element };
+    database.ref("MainMenu" + "/" + element.Code).set(dbMenu);
+}
 
+export const getMenu = (code: string, onSuccess: any) => {
+    debugger;
     let result: MenuModel[] = []
 
     var ref = database.ref(code);
@@ -31,4 +36,8 @@ export const getMenu = (code: string, onSuccess: any) => {
             onSuccess(result);
         });
     return result;
+}
+
+export const removeMenuItem = (menuItem: MenuModel) => {
+    database.ref(menuItem.Code + "/" + menuItem.key).remove();
 }

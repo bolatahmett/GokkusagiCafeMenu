@@ -6,4 +6,5 @@ export declare class MenuModel {
     Menu?: MenuModel[];
     IsBase?: number;
     Price?: string;
+    key?: string;
 }

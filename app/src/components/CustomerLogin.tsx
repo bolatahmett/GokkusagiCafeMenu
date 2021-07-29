@@ -124,6 +124,15 @@ const RegisterUser = () => {
                             </Col>
                         </Row>
                     </Form.Item>
+                    <Form.Item {...tailFormItemLayout}>
+                        <Row>
+                            <Col span={12} offset={6}>
+                                <Button type="primary" onClick={() => context.setPageStatus(1)}>
+                                    Yönetici Girişi
+                                </Button>
+                            </Col>
+                        </Row>
+                    </Form.Item>
                 </Form>
             </Col>
         </Row >

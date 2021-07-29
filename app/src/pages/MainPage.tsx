@@ -1,19 +1,39 @@
-import React, { useEffect, useState } from 'react'
-import { BackTop, Card, Col, Collapse, List, Row, Space } from 'antd';
+import React, { useContext, useEffect, useState } from 'react'
+import { BackTop, Card, Col, Collapse, List, Popconfirm, Row, Space } from 'antd';
 import { MenuModel } from '../Model/MenuModel';
 import { RightOutlined } from '@ant-design/icons';
-import { getMenu } from '../DB/Menu';
+import { getMenu, updateMenu } from '../DB/Menu';
+import UserContext from '../components/UserContext';
 const { Meta } = Card;
 const { Panel } = Collapse;
 
 function MainPage(props: any) {
     const [mainMenu, setMainMenu] = useState([]);
 
+    const context = useContext(UserContext);
+
     useEffect(() => {
         if (mainMenu.length == 0) {
             getMenu("MainMenu", setMainMenu);
         }
     }, []);
+
+    const deleteMenuItem = (menu: MenuModel, item: MenuModel) => {
+        let newMenu: MenuModel[] = [];
+        menu.Menu.forEach(element => {
+            if (item.Title !== element.Title) {
+                newMenu.push(element);
+            }
+        });
+        menu.Menu = newMenu;
+
+        updateMenu(menu, menu.Code);
+        getMenu("MainMenu", setMainMenu);
+    }
+
+    const editMenuItem = (item: any) => {
+
+    }
 
     const cards = mainMenu.map((value: MenuModel) => {
         return <Panel showArrow={false}
@@ -31,7 +51,13 @@ function MainPage(props: any) {
                 itemLayout="horizontal"
                 dataSource={value.Menu}
                 renderItem={item => (
-                    <List.Item>
+                    <List.Item
+                        actions={(context.user as IUserModel)?.Type === 1 && [<a key="list-edit" onClick={() => editMenuItem(item)}>Düzenle</a>,
+                        <Popconfirm placement="top" title={"Menu silinecek emin misiniz?"} onConfirm={() => deleteMenuItem(value, item)} okText="Yes" cancelText="No">
+                            <a key="list-delete">Sil</a>
+                        </Popconfirm>
+                        ]}
+                    >
                         <List.Item.Meta
                             avatar={<RightOutlined />}
                             title={item.Title}
