@@ -44,7 +44,7 @@ function App(props: AppProps) {
                     <Button id={"CustomerLoginPassword"} type="primary" shape="round" className={"menu-button"} style={{ marginTop: "300px" }} onClick={() => { setPageStatus(4); }} hidden={(user as IUserModel)?.Type !== 1}> Müşteri Şifresi Al </Button>
                     <Button id={"RegisterUser"} type="primary" shape="round" className={"menu-button"} style={{ marginTop: "350px" }} onClick={() => { setPageStatus(2); }} hidden={(user as IUserModel)?.Type !== 1}> Kullanıcı Ekle </Button>
                     <Row justify={"center"}>
-                        <Col>
+                        <Col span={24}>
                             {pageStatus == 0 && <MainPage></MainPage>}
                             {pageStatus == 1 && <UserLogin></UserLogin>}
                             {pageStatus == 2 && <RegisterUser></RegisterUser>}

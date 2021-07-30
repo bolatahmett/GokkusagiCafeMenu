@@ -1,4 +1,4 @@
-import { Form, Input, Button, Checkbox, Col, Row, Select } from 'antd';
+import { Form, Input, Button, Col, Row, Select } from 'antd';
 import React, { useContext } from 'react';
 import { LockOutlined } from '@ant-design/icons';
 import UserContext from '../components/UserContext';
@@ -34,7 +34,7 @@ const UserLogin = () => {
     );
 
     return (
-        <Row justify="center" align="middle" style={{ height: "inherit" }}>
+        <Row justify="center" style={{ paddingTop: "50px", height: "inherit" }}>
             <Col>
                 <Form
                     name="normal_login"
@@ -58,19 +58,10 @@ const UserLogin = () => {
                             placeholder="Şifre"
                         />
                     </Form.Item>
-                    <Form.Item>
-                        <Form.Item name="remember" valuePropName="checked" noStyle>
-                            <Checkbox>Remember me</Checkbox>
-                        </Form.Item>
-
-                        <a className="login-form-forgot" href="">
-                            Forgot password
-                        </a>
-                    </Form.Item>
 
                     <Form.Item>
-                        <Button type="primary" htmlType="submit" className="login-form-button">
-                            Log in
+                        <Button type="primary" block ghost htmlType="submit" className="login-form-button">
+                            Giriş
                         </Button>
                     </Form.Item>
                 </Form>

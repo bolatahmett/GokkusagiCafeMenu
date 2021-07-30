@@ -15,18 +15,6 @@ const formItemLayout = {
         sm: { span: 16 },
     },
 };
-const tailFormItemLayout = {
-    wrapperCol: {
-        xs: {
-            span: 24,
-            offset: 0,
-        },
-        sm: {
-            span: 16,
-            offset: 8,
-        },
-    },
-};
 
 const RegisterUser = () => {
     const [form] = Form.useForm();
@@ -58,8 +46,8 @@ const RegisterUser = () => {
     );
 
     return (
-        <Row justify="center" align="middle" style={{ height: "inherit" }}>
-            <Col  >
+        <Row justify="center" style={{ paddingTop: "50px" }}>
+            <Col xs={20} sm={16} md={12} lg={8} xl={8}>
                 <Form
                     {...formItemLayout}
                     form={form}
@@ -73,31 +61,27 @@ const RegisterUser = () => {
 
                     <Form.Item
                         name="PhoneNumber"
-                        label="Telefon Numarası"
                         rules={[{ required: true, message: 'Lütfen telefon numarası giriniz!' }]}
                     >
-                        <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
+                        <Input placeholder={"Telefon Numarası"} addonBefore={prefixSelector} style={{ width: '100%' }} />
                     </Form.Item>
 
                     <Form.Item
                         name="Name"
-                        label="Isim"
                         rules={[{ required: true, message: 'Lütfen isim giriniz!' }]}
                     >
-                        <Input />
+                        <Input placeholder={"Isim"} />
                     </Form.Item>
 
                     <Form.Item
                         name="Surname"
-                        label="Soyisim"
                         rules={[{ required: true, message: 'Lütfen soyisim giriniz!' }]}
                     >
-                        <Input />
+                        <Input placeholder={"Soyisim"} />
                     </Form.Item>
 
                     <Form.Item
                         name="Password"
-                        label="Şifre"
                         rules={[
                             {
                                 required: true,
@@ -106,29 +90,26 @@ const RegisterUser = () => {
                         ]}
                         hasFeedback
                     >
-                        <Input.Password placeholder={"Şifreyi görevliden isteyiniz."} />
+                        <Input.Password placeholder={"Şifre (Görevliden isteyiniz.)"} />
                     </Form.Item>
 
-                    <Form.Item {...tailFormItemLayout}>
+                    <Form.Item>
                         <Row>
-                            <Col span={6} offset={3}>
-                                <Button type="primary" htmlType="reset" onClick={() => context.setPageStatus(0)}>
+                            <Col span={7} offset={1}>
+                                <Button block ghost type="primary" htmlType="reset" onClick={() => context.setPageStatus(0)}>
                                     Vazgeç
                                 </Button>
 
                             </Col>
-                            <Col span={6} offset={6}>
-                                <Button type="primary" htmlType="submit">
+                            <Col span={7} offset={1}>
+                                <Button block ghost type="primary" htmlType="submit">
                                     Onayla
                                 </Button>
                             </Col>
-                        </Row>
-                    </Form.Item>
-                    <Form.Item {...tailFormItemLayout}>
-                        <Row>
-                            <Col span={12} offset={6}>
-                                <Button type="primary" onClick={() => context.setPageStatus(1)}>
-                                    Yönetici Girişi
+
+                            <Col span={7} offset={1}>
+                                <Button block ghost type="primary" onClick={() => context.setPageStatus(1)}>
+                                    Yönetici
                                 </Button>
                             </Col>
                         </Row>
