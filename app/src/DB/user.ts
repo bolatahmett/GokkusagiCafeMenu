@@ -23,7 +23,7 @@ export const loginUser = (user: ILoginModel, onSuccess: any) => {
 
 export const loginCustomerUser = (user: IUserModel, onSuccess: any) => {
     var ref = database.ref("customeruserkeys")
-    ref.orderByChild('key')
+    ref.orderByChild('customerKey')
         .equalTo(user.Password)
         .once('value')
         .then(function (snapshot) {
@@ -33,8 +33,15 @@ export const loginCustomerUser = (user: IUserModel, onSuccess: any) => {
 }
 
 export const registerCustomerKey = () => {
-    var userKey = database.ref("customeruserkeys").push().key;
-    var dbUser = { key: userKey, DateTime: new Date() };
-    database.ref("customeruserkeys/" + userKey).set(dbUser);
-    return userKey;
+    var key = database.ref("customeruserkeys").push().key;
+    const customerKey = getRandomInt(1000, 9999);
+    var dbUser = { key: key, customerKey: customerKey, DateTime: new Date() };
+    database.ref("customeruserkeys/" + customerKey).set(dbUser);
+    return customerKey;
+}
+
+const getRandomInt = (min: any, max: any) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }

@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import UserContext from '../src/components/UserContext';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import MainPage from './pages/MainPage';
-import { Button, Col, Row } from 'antd';
+import { Badge, Button, Col, Row } from 'antd';
 import UserLogin from './components/UserLogin';
 import RegisterUser from './components/RegisterUser';
 import CustomerLogin from './components/CustomerLogin';
 import CustomerPassword from './components/CustomerPassword';
+import { NotificationOutlined } from '@ant-design/icons';
 
 interface AppProps {
     firebase: any;
@@ -37,12 +38,15 @@ function App(props: AppProps) {
                 )}
             >
                 <UserContext.Provider value={value}>
-                    <Button id={"Login"} block ghost type="primary" shape="round" size={"large"} className={"menu-button"} style={{ marginTop: "0px" }} onClick={() => { setPageStatus(3); }}> Giriş Yap </Button>
-                    <Button id={"Order"} type="primary" shape="round" className={"menu-button"} style={{ marginTop: "150px" }} hidden={(user as IUserModel)?.Type !== 0}>Sipariş Ver</Button>
-                    <Button id={"CallingTheWaiter"} type="primary" shape="round" className={"menu-button"} style={{ marginTop: "200px" }} hidden={(user as IUserModel)?.Type !== 0}> Garson Çağır</Button>
-                    <Button id={"CommentPersonal"} type="primary" shape="round" className={"menu-button"} style={{ marginTop: "250px" }} hidden={(user as IUserModel)?.Type !== 0}> Hizmeti Yorumla </Button>
-                    <Button id={"CustomerLoginPassword"} type="primary" shape="round" className={"menu-button"} style={{ marginTop: "300px" }} onClick={() => { setPageStatus(4); }} hidden={(user as IUserModel)?.Type !== 1}> Müşteri Şifresi Al </Button>
-                    <Button id={"RegisterUser"} type="primary" shape="round" className={"menu-button"} style={{ marginTop: "350px" }} onClick={() => { setPageStatus(2); }} hidden={(user as IUserModel)?.Type !== 1}> Kullanıcı Ekle </Button>
+                    {(user as IUserModel)?.Type === 1 && <Badge count={5}>
+                        <NotificationOutlined style={{ fontSize: '32px', color: '#08c' }} />
+                    </Badge>}
+                    {user.Type === -1 && <Button id={"Login"} ghost type="primary" shape="round" className={"menu-button"} style={{ marginTop: "400px" }} onClick={() => { setPageStatus(3); }}> Giriş </Button>}
+                    {/* <Button id={"Order"} ghost type="primary" shape="round" className={"menu-button"} style={{ marginTop: "250px" }} hidden={(user as IUserModel)?.Type !== 0}>Sipariş Ver</Button> */}
+                    <Button id={"CallingTheWaiter"} ghost type="primary" shape="round" className={"menu-button"} style={{ marginTop: "400px" }} hidden={(user as IUserModel)?.Type !== 0}> Garson Çağır</Button>
+                    {/* <Button id={"CommentPersonal"} ghost type="primary" shape="round" className={"menu-button"} style={{ marginTop: "300px" }} hidden={(user as IUserModel)?.Type !== 0}> Hizmeti Yorumla </Button> */}
+                    <Button id={"CustomerLoginPassword"} ghost type="primary" shape="round" className={"menu-button"} style={{ marginTop: "300px" }} onClick={() => { setPageStatus(4); }} hidden={(user as IUserModel)?.Type !== 1}> Müşteri Şifresi Al </Button>
+                    <Button id={"RegisterUser"} ghost type="primary" shape="round" className={"menu-button"} style={{ marginTop: "350px" }} onClick={() => { setPageStatus(2); }} hidden={(user as IUserModel)?.Type !== 1}> Kullanıcı Ekle </Button>
                     <Row justify={"center"}>
                         <Col span={24}>
                             {pageStatus == 0 && <MainPage></MainPage>}

@@ -43,4 +43,5 @@
    right: 0px !important;
    z-index: 9999 !important;
    width: 75px !important;
+   min-width: fit-content;
  }

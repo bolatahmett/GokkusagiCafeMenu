@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { BackTop, Button, Card, Col, Collapse, List, Popconfirm, Row, Space } from 'antd';
+import { Button, Card, Col, Collapse, List, Popconfirm, Row, Space } from 'antd';
 import { MenuModel } from '../Model/MenuModel';
 import { RightOutlined } from '@ant-design/icons';
 import { getMenu, updateMenu } from '../DB/Menu';
@@ -91,7 +91,6 @@ function MainPage(props: any) {
 
     return (
         <>
-            <BackTop />
             <Row justify="center" align="middle" style={{ padding: "30px", paddingTop: "0px" }}>
                 {<Col>
                     {cardsWithSpace}
