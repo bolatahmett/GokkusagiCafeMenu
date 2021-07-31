@@ -37,7 +37,7 @@ const RegisterUser = () => {
             PhoneNumber: values.PhoneNumber,
             Name: values.Name,
             Surname: values.Surname,
-            Email: values.Email === undefined ? "a" : values.Email,
+            DeskNo: values.DeskNo === undefined ? "0" : values.DeskNo,
             Password: values.Password,
             Type: 1
         };

@@ -25,7 +25,7 @@ const RegisterUser = () => {
             PhoneNumber: values.PhoneNumber,
             Name: values.Name,
             Surname: values.Surname,
-            Email: values.Email === undefined ? "a" : values.Email,
+            DeskNo: values.DeskNo === undefined ? "0" : values.DeskNo,
             Password: values.Password,
             Type: 0
         };
@@ -58,6 +58,13 @@ const RegisterUser = () => {
                     }}
                     scrollToFirstError
                 >
+
+                    <Form.Item
+                        name="DeskNo"
+                        rules={[{ required: true, message: 'Lütfen masa numarası giriniz!' }]}
+                    >
+                        <Input placeholder={"Masa Numarası"} style={{ width: '100%' }} />
+                    </Form.Item>
 
                     <Form.Item
                         name="PhoneNumber"
